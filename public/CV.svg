@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="217.6 217.7 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Plus Jakarta Sans">@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans%3Aital%2Cwght%400%2C200..800%3B1%2C200..800&amp;display=swap);</style>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, -0.4000000059604645, -0.30000001192090053)">
+    <rect style="stroke-linejoin: round; paint-order: stroke; transform-box: fill-box; transform-origin: 50% 50%;" x="218" y="218" width="64" height="64" rx="16" ry="16"/>
+    <text style="fill: rgb(255, 255, 255); font-family: 'Plus Jakarta Sans'; font-size: 32px; font-weight: 700; white-space: pre;" x="226.464" y="263.128">CV</text>
+  </g>
+</svg>
