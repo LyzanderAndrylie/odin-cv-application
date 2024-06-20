@@ -91,7 +91,7 @@ export function PreviewDialog() {
     <Dialog open={previewIsOpen} onOpenChange={setPreviewIsOpen}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className='dark:text-white'>Preview</DialogTitle>
+          <DialogTitle className="dark:text-white">Preview</DialogTitle>
         </DialogHeader>
         <div className="flex h-[500px] items-center justify-center">
           <Preview className="w-full" />
@@ -135,9 +135,10 @@ function Preview({ className }: Readonly<PreviewProps>) {
           title="Tech CV"
           author={personalInformation.fullname}
           creator={personalInformation.fullname}
-          subject="Tech CV created using Tech CV Generator"
+          subject="A Tech CV created using the Tech CV Generator"
           keywords="CV"
           creationDate={new Date()}
+          modificationDate={new Date()}
           pageLayout="singlePage"
         >
           <Page size="A4" style={previewStyles.page}>
@@ -186,10 +187,12 @@ function Preview({ className }: Readonly<PreviewProps>) {
                 ))}
               </View>
             )}
-            {hasSkills && (
+            {(hasSkills || hasProjects) && (
               <View style={previewStyles.section}>
                 <Text style={previewStyles.subheading}>
-                  Technical Skills {hasProjects && '& Projects'}
+                  {hasSkills && hasProjects && 'Technical Skills & Projects'}
+                  {hasSkills && !hasProjects && 'Technical Skills'}
+                  {!hasSkills && hasProjects && 'Projects'}
                 </Text>
                 <View style={previewStyles.subsection}>
                   {technicalSkills.map((skill, index) => (
