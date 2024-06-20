@@ -1,5 +1,5 @@
 import { useCreateCV } from '@/contexts';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { FiPlus } from 'react-icons/fi';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { RiDeleteBinFill } from 'react-icons/ri';
@@ -8,7 +8,6 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Textarea } from '../ui/textarea';
-import { Fragment } from 'react';
 
 export function PersonalInformationInput() {
   const { personalInformation, setPersonalInformation } = useCreateCV();
@@ -286,7 +285,7 @@ export function TechnicalSkillIsnput() {
     <>
       <div className="mb-4 grid grid-cols-[1fr_4fr_auto] gap-3">
         {technicalSkills.map((currentSkill, index) => (
-          <Fragment key={`${currentSkill.name}-${index}`}>
+          <Fragment key={index}>
             <div>
               <Label className="mb-1 block">Skill</Label>
               <Input
